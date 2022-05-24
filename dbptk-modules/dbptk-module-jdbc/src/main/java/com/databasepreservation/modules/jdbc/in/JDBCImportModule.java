@@ -436,6 +436,7 @@ public class JDBCImportModule implements DatabaseImportModule {
   }
 
   protected String getDatabaseName() throws SQLException, ModuleException {
+    // for SQLite
     if (this.driverClassName.equals("org.sqlite.JDBC")) {
       return "main";
     } else {
